@@ -25,5 +25,3 @@ module.exports = client => {
     }
     reactionMessage(client, channelID, messageText, reactionOnMessage)
 }
-
-

@@ -20,7 +20,7 @@ module.exports = async (client, id, text, reactions = []) => {
         for (const message of messages) {
           message[1].edit(text)
           addReactions(message[1], reactions)
-        }
       }
-    })
-  }
+    }
+  })
+}
