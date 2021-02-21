@@ -1,18 +1,17 @@
 const reactionMessage = require('./reactionMessage')
 
 module.exports = client => {
-    const channelID = '809476477321609306'
+    const channelID = '812490492700393524'
 
     const getEmojiName = (emojiName) =>
         client.emojis.cache.find((emoji) => emoji.name === emojiName)
     
     const reactionEmojis = {
-        whale: 'whale',
-        stinky: 'stinky',
-        mymelodysad: 'mymelodysad',
-        money: 'money',
-        meow: 'meow',
-        hahayes: 'hahayes'
+        TwitchStreamer: 'Twitch Streamer',
+        Harmony: 'Harmony',
+        BepInEx: 'BepInEx',
+        SlimVML: 'SlimVML',
+        SlimVMLBetaTester: 'SlimVML-Beta-Tester'
     }
 
     const reactionOnMessage = []
@@ -54,13 +53,13 @@ module.exports = client => {
       }
     
       client.on('messageReactionAdd', (reaction, user) => {
-        if (reaction.message.channel.id === '809476477321609306') {
+        if (reaction.message.channel.id === '812490492700393524') {
           handleReaction(reaction, user, true)
         }
       })
     
       client.on('messageReactionRemove', (reaction, user) => {
-        if (reaction.message.channel.id === '809476477321609306') {
+        if (reaction.message.channel.id === '812490492700393524') {
             handleReaction(reaction, user, false)
         }
       })
