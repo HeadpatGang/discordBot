@@ -1,1 +1,1 @@
-worker: node src/Main Files/index.js
+worker: node realsrc/index.js
