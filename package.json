@@ -1,0 +1,8 @@
+{
+    "name": "bigdumbdiscordbot",
+    "description": "This bot is dumb",
+    "version": "1.0.0",
+    "engines": {
+        "node": "14.15.5"
+    }
+}

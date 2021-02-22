@@ -72,9 +72,6 @@ web_modules/
 .env
 .env.test
 
-# json for my auth code
-*.json
-
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
