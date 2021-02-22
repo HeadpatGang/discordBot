@@ -1,4 +1,5 @@
 const reactionMessage = require('./reactionMessage')
+const roleToPing = "Admin"
 
 module.exports = client => {
     const channelID = '812490492700393524'
@@ -16,7 +17,7 @@ module.exports = client => {
 
     const reactionOnMessage = []
 
-    let messageText = 'React with the emoji for the role you wish to have \n\n'
+    let messageText = `React with the emoji for the role you wish to have. \n In order to get the Mod Developer role, please ping a ${roleToPing} with the link to your mod \n\n.`
     for (const key in reactionEmojis) {
         const emoji = getEmojiName(key)
         reactionOnMessage.push(emoji)
