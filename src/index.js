@@ -9,4 +9,4 @@ client.on('ready', () => {
     checkForReactions(client)
 })
 
-client.login(process.env.discordAuthToken)
+client.login(discordAuthToken)
