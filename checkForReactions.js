@@ -10,12 +10,12 @@ module.exports = client => {
         client.emojis.cache.find((emoji) => emoji.name === emojiName)
     
     const reactionEmojis = {
-        AssetCreator: 'Asset Creator',
         TwitchStreamer: 'Twitch Streamer',
         Harmony: 'Harmony',
         BepInEx: 'BepInEx',
         SlimVML: 'SlimVML',
-        SlimVMLBetaTester: 'SlimVML-Beta-Tester' 
+        SlimVMLBetaTester: 'SlimVML-Beta-Tester',
+        AssetCreator: 'Asset Creator'
     }
 
     const reactionOnMessage = []
