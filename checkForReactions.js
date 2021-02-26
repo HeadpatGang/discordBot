@@ -1,9 +1,11 @@
 const reactionMessage = require('./reactionMessage')
-const roleToPing = "Admin"
+const roleToObtain = '812412753628758057'
+const roleToPing = '807359030468018207'
+const channelID = '812490492700393524'
+const userIDSSB = '813804574128209951'
+const userIDBDB = '809457454839627816'
 
 module.exports = client => {
-    const channelID = '812490492700393524'
-
     const getEmojiName = (emojiName) =>
         client.emojis.cache.find((emoji) => emoji.name === emojiName)
     
@@ -12,12 +14,13 @@ module.exports = client => {
         Harmony: 'Harmony',
         BepInEx: 'BepInEx',
         SlimVML: 'SlimVML',
-        SlimVMLBetaTester: 'SlimVML-Beta-Tester'
+        SlimVMLBetaTester: 'SlimVML-Beta-Tester',
+        AssetCreator: 'Asset Creator'
     }
 
     const reactionOnMessage = []
 
-    let messageText = `React with the emoji for the role you wish to have. \nIn order to get the Mod Developer role, please ping a ${roleToPing} with the link to your mod.\n\n`
+    let messageText = `React with the emoji for the role you wish to have. \nIn order to get the <@&${roleToObtain}> role, please ping an <@&${roleToPing}> with the link to your mod.\n\n`
     for (const key in reactionEmojis) {
         const emoji = getEmojiName(key)
         reactionOnMessage.push(emoji)
@@ -32,10 +35,10 @@ module.exports = client => {
 
     const handleReaction = (reaction, user, add) => {
     
-        if (user.id === '809457454839627816') {
+        if (user.id === userIDBDB || user.id === userIDSSB)  {
           return
         }
-    
+
         const emoji = reaction._emoji.name
         const { guild } = reaction.message
         const roleName = reactionEmojis[emoji]
@@ -54,13 +57,13 @@ module.exports = client => {
       }
     
       client.on('messageReactionAdd', (reaction, user) => {
-        if (reaction.message.channel.id === '812490492700393524') {
+        if (reaction.message.channel.id === channelID) {
           handleReaction(reaction, user, true)
         }
       })
     
       client.on('messageReactionRemove', (reaction, user) => {
-        if (reaction.message.channel.id === '812490492700393524') {
+        if (reaction.message.channel.id === channelID) {
             handleReaction(reaction, user, false)
         }
       })
