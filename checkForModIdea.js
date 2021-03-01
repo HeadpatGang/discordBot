@@ -1,4 +1,5 @@
 const channelID = ['807377739007000658', '813790122944364574']
+const sbchannelID = ['813831743994855484', '813844527294578730']
 
 module.exports = client => {
     client.on('message', message => {
@@ -12,7 +13,8 @@ module.exports = client => {
         } else if(message.channel.id === channelID[1]) {
             if(message.content.startsWith('!modidea')) {
                 message.reply('Your modidea has been sent to ' + message.guild.channels.cache.get(channelID[0]).toString());
-                client.channels.cache.get(channelID[0]).send(message)
+                let replyMessage = `${message} \nSent by ${message.author.toString()}`
+                client.channels.cache.get(channelID[0]).send(replyMessage)
             }
         }
     })
