@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const checkForReactions = require('./checkForReactions');
 const checkForModIdea = require('./checkForModIdea');
-const commandHandler = require('./commandHandler')
 const client = new Discord.Client()
 //require('dotenv').config();
 const discordAuthTokenBDB = process.env.discordAuthTokenBDB;
