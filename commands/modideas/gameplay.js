@@ -9,6 +9,6 @@ module.exports = {
             .setTitle('Gameplay')
             .setDescription(message.content.slice(9))
             .setFooter(`${message.author.tag}`)
-        message.channel.send(embedMessage)
+        message.guild.channels.cache.get('817843208490451034').send(embedMessage)
     }
 }

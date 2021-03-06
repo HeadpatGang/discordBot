@@ -5,10 +5,10 @@ module.exports = {
     args: true,
     execute(message) {
         embedMessage = new Discord.MessageEmbed()
-            .setColor('#0099ff')
+            .setColor('#46b9c0')
             .setTitle('UI')
             .setDescription(message.content.slice(3))
             .setFooter(`${message.author.tag}`)
-        message.channel.send(embedMessage)
+        message.guild.channels.cache.get('817843208490451034').send(embedMessage)
     }
 }

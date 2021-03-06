@@ -1,7 +1,7 @@
 const fs = require('fs')
 const Discord = require('discord.js')
 const { prefix } = require('./config.json');
-const channelID = ['813831743994855484', '816610602164289546']
+const channelID = ['817843208490451034', '817843229181476924']
 
 module.exports = client => {
     client.commands = new Discord.Collection();
@@ -35,18 +35,15 @@ module.exports = client => {
             })
             .catch();
         }
-        try {
-            command.execute(message, args);
-        } catch (error) {
-            console.error(error);
-            message.reply(`There was an error trying to execute that command ${message.author}, if this persists please ping Jessica#7280`)
-        }
-
-        if(message.channel.id === '813831743994855484') {
-            if(command.name === 'ui') {
-                client.channels.cache.get('816610602164289546').send(message.content.slice(3))
+        for(let i = 0; i < channelID.length; i++) {
+            if(message.channel.id === channelID[i]) {
+                try {
+                    command.execute(message, args);
+                } catch (error) {
+                    console.error(error);
+                    message.reply(`There was an error trying to execute that command ${message.author}, CC: <@&226997505534066688>`)
+                }
             }
-            
         }
     })
 }

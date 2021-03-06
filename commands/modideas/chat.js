@@ -9,6 +9,6 @@ module.exports = {
             .setTitle('Chat')
             .setDescription(message.content.slice(5))
             .setFooter(`${message.author.tag}`)
-        message.channel.send(embedMessage)
+        message.guild.channels.cache.get('817843208490451034').send(embedMessage)
     }
 }

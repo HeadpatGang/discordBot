@@ -6,9 +6,9 @@ module.exports = {
     execute(message) {
         embedMessage = new Discord.MessageEmbed()
             .setColor('#00FA9A')
-            .setTitle('npc')
+            .setTitle('NPC')
             .setDescription(message.content.slice(4))
             .setFooter(`${message.author.tag}`)
-        message.channel.send(embedMessage)
+        message.guild.channels.cache.get('817843208490451034').send(embedMessage)
     }
 }
