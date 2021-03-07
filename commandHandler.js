@@ -18,7 +18,6 @@ module.exports = client => {
 
     client.on('message', message => {
         if(message.author.bot) return;
-        if(message.content.startsWith(prefix) && (message.content.length === 1)) return;
         if(!message.content.startsWith(prefix)) return;
         const args = message.content.slice(prefix.length).trim().split(/ +/);
 	    const commandName = args.shift().toLowerCase();
