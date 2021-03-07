@@ -1,4 +1,4 @@
-const channelID = ['817843208490451034']
+const channelID = ['807377739007000658']
 
 module.exports = client => {
     client.on('message', message => {
