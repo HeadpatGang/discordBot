@@ -9,6 +9,6 @@ module.exports = {
             .setTitle(`${message.author.username}` + "'s Mod Idea")
             .setDescription(message.content.slice(9))
             .setFooter(`${message.author.tag}`)
-        message.guild.channels.cache.get('817843208490451034').send(embedMessage)
+        message.guild.channels.cache.get('807377739007000658').send(embedMessage)
     }
 }

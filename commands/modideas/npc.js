@@ -9,6 +9,6 @@ module.exports = {
             .setTitle('NPC')
             .setDescription(message.content.slice(4))
             .setFooter(`${message.author.tag}`)
-        message.guild.channels.cache.get('817843208490451034').send(embedMessage)
+        message.guild.channels.cache.get('807377739007000658').send(embedMessage)
     }
 }
