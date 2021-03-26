@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const deleteLog = '825129952676413500'
+const deleteLog = '824568452198694943'
 
 module.exports = client => {
     client.on("messageDelete", async message => {
