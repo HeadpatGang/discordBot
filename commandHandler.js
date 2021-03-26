@@ -2,7 +2,7 @@ const fs = require('fs')
 const Discord = require('discord.js')
 const { prefix } = require('./config.json');
 const sbChannelID = ['817843208490451034', '817843229181476924']
-const ChannelID = ['807377739007000658', '813790122944364574']
+const channelID = ['807377739007000658', '813790122944364574']
 
 module.exports = client => {
     client.commands = new Discord.Collection();
@@ -35,8 +35,8 @@ module.exports = client => {
             })
             .catch();
         }
-        for(let i = 0; i < ChannelID.length; i++) {
-            if(message.channel.id === ChannelID[i]) {
+        for(let i = 0; i < channelID.length; i++) {
+            if(message.channel.id === channelID[i]) {
                 try {
                     command.execute(message, args);
                 } catch (error) {
