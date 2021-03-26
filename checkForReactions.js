@@ -1,6 +1,6 @@
 const reactionMessage = require('./reactionMessage')
 const roleToObtain = '812412753628758057'
-const roleToPing = '807359030468018207'
+const roleToPing = ['807359030468018207', '821044073338896395']
 const channelID = '812490492700393524'
 const userIDSSB = '813804574128209951'
 const userIDBDB = '809457454839627816'
@@ -20,7 +20,7 @@ module.exports = client => {
 
     const reactionOnMessage = []
 
-    let messageText = `React with the emoji for the role you wish to have. \nIn order to get the <@&${roleToObtain}> role, please ping an <@&${roleToPing}> with the link to your mod.\n\n`
+    let messageText = `React with the emoji for the role you wish to have. \nIn order to get the <@&${roleToObtain}> role, please ping an <@&${roleToPing[0]}> or <@&${roleToPing[1]}> with a link to your mod & a nice please.\n\n`
     for (const key in reactionEmojis) {
         const emoji = getEmojiName(key)
         reactionOnMessage.push(emoji)
