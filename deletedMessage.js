@@ -9,12 +9,11 @@ module.exports = client => {
         let embed = new Discord.MessageEmbed()
             .setTitle("**Deleted Message**")
             .setColor('#FF0000')
+            .setDescription('**Message**\n' +  message.content)
             .addFields(
+                { name: '\u200B', value: '\u200B'},
                 { name: 'Author', value: message.author.tag, inline: true},
-                { name: '\u200B', value: '\u200B', inline: true},
                 { name: 'Channel', value: message.channel, inline: true},
-                { name: 'Message', value: message.content, inline: true},
-                { name: '\u200B', value: '\u200B', inline: true},
                 { name: 'Executor', value: entry.executor, inline: true},
             )
             .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);
