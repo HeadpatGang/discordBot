@@ -1,5 +1,5 @@
 const reactionMessage = require('./reactionMessage')
-const roleToObtain = '812412753628758057'
+const modDeveloperRole = '812412753628758057'
 const roleToPing = ['807359030468018207', '821044073338896395']
 const channelID = '812490492700393524'
 const userIDSSB = '813804574128209951'
@@ -11,16 +11,14 @@ module.exports = client => {
     
     const reactionEmojis = {
         TwitchStreamer: 'Twitch Streamer',
-        Harmony: 'Harmony',
-        BepInEx: 'BepInEx',
-        SlimVML: 'SlimVML',
-        SlimVMLBetaTester: 'SlimVML-Beta-Tester',
-        AssetCreator: 'Asset Creator'
+        AssetCreator: 'Asset Creator',
+        ModDeveloper: 'Mod Developer',
+        Library: 'Library'
     }
 
     const reactionOnMessage = []
 
-    let messageText = `React with the emoji for the role you wish to have. \nIn order to get the <@&${roleToObtain}> role, please ping an <@&${roleToPing[0]}> or <@&${roleToPing[1]}> with a link to your mod & a nice please.\n\n`
+    let messageText = `React with the emoji for the role you wish to have. \nPlease note that everybody has access to view each category, only those whom have the corresponding role can type in them however.\n\n`
     for (const key in reactionEmojis) {
         const emoji = getEmojiName(key)
         reactionOnMessage.push(emoji)

@@ -41,7 +41,7 @@ module.exports = client => {
                     command.execute(message, args);
                 } catch (error) {
                     console.error(error);
-                    message.reply(`There was an error trying to execute that command ${message.author}, CC: <@&226997505534066688>`)
+                    message.reply(`There was an error trying to execute that command ${message.author}`)
                 }
             }
         }

@@ -4,5 +4,4 @@ module.exports = client => {
             message.react('814559639496425502')
         }
     })
-    
 }

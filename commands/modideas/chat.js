@@ -1,3 +1,4 @@
+const { sandBoxOutputChannel, liveServerOutputChannel } = require('../../config.json');
 const Discord = require('discord.js')
 module.exports = {
     name: 'chat',
@@ -9,6 +10,6 @@ module.exports = {
             .setTitle('Chat')
             .setDescription(message.content.slice(5))
             .setFooter(`${message.author.tag}`)
-        message.guild.channels.cache.get('807377739007000658').send(embedMessage)
+        message.guild.channels.cache.get(liveServerOutputChannel).send(embedMessage)
     }
 }
