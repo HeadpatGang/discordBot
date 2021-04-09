@@ -10,7 +10,7 @@ module.exports = client => {
         const channel = message.guild.channels.cache.get(deleteLog)
         executorTag = (target.id === messageAuthor)
             ? `<@${executor.id}>`
-            : `<@${messageAuthor}>`  
+            : `<@${messageAuthor}>`
         const embed = new Discord.MessageEmbed()
             .setTitle("**Deleted Message**")
             .setColor('#FF0000')

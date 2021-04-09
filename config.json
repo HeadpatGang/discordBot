@@ -1,3 +1,7 @@
 {
-    "prefix": "!"
+    "prefix": "!",
+    "sandBoxOutputChannel": "817843208490451034",
+    "sandBoxInputChannel": "817843229181476924",
+    "liveServerOutputChannel": "807377739007000658",
+    "liveServerInputChannel": "807377739007000658"
 }

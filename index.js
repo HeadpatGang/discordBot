@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const checkForReactions = require('./checkForReactions');
 const checkForModIdea = require('./checkForModIdea');
-const noFortnite = require('./noFortnite');
+const noBully = require('./noBully');
 const commandHandler = require('./commandHandler');
 const deletedMessage = require('./deletedMessage');
 const client = new Discord.Client()
@@ -13,7 +13,7 @@ client.on('ready', () => {
     console.log('Client is ready')
     checkForReactions(client)
     checkForModIdea(client)
-    noFortnite(client)
+    noBully(client)
     commandHandler(client)
     deletedMessage(client)
 })
