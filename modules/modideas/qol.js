@@ -1,5 +1,5 @@
-const { sandBoxOutputChannel, liveServerOutputChannel } = require('../../config.json');
-const Discord = require('discord.js')
+const { sandBoxOutputChannel, liveServerOutputChannel } = require('../../../config.json');
+const Discord = require('discord.js');
 module.exports = {
     name: 'qol',
     description: 'Makes a mod idea for a QoL mod',
@@ -9,7 +9,7 @@ module.exports = {
             .setColor('#FFE4E1')
             .setTitle('QoL')
             .setDescription(message.content.slice(4))
-            .setFooter(`${message.author.tag}`)
-        message.guild.channels.cache.get(liveServerOutputChannel).send(embedMessage)
+            .setFooter(`${message.author.tag}`);
+        message.guild.channels.cache.get(liveServerOutputChannel).send(embedMessage);
     }
 }

@@ -1,5 +1,5 @@
-const { sandBoxOutputChannel, liveServerOutputChannel } = require('../../config.json');
-const Discord = require('discord.js')
+const { sandBoxOutputChannel, liveServerOutputChannel } = require('../../../config.json');
+const Discord = require('discord.js');
 module.exports = {
     name: 'item',
     description: 'Makes a mod idea for a Item mod',
@@ -9,7 +9,7 @@ module.exports = {
             .setColor('#DC143C')
             .setTitle('Item')
             .setDescription(message.content.slice(5))
-            .setFooter(`${message.author.tag}`)
-        message.guild.channels.cache.get(liveServerOutputChannel).send(embedMessage)
+            .setFooter(`${message.author.tag}`);
+        message.guild.channels.cache.get(liveServerOutputChannel).send(embedMessage);
     }
 }
