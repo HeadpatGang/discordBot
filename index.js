@@ -9,7 +9,7 @@ const {
 
 const client = new Discord.Client();
 //require('dotenv').config();
-const discordAuthTokenBDB = process.env.discordAuthTokenBDB;
+const discordAuthTokenBDB = "ODMzNjY4NTYyNjgxNTkzOTE2.YH1sWg.X6auJkZk8IZZeqGEJIHSBkqNPMw"; //process.env.discordAuthTokenBDB;
 const discordAuthTokenSSB = process.env.discordAuthTokenSSB;
 
 client.on('ready', () => {
