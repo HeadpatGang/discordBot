@@ -1,8 +1,8 @@
-const checkForReactions = require('./modules/checkForReactions');
-const checkForModIdea = require('./modules/checkForModIdea');
-const noBully = require('./modules/noBully');
-const commandHandler = require('./modules/commandHandler');
-const deletedMessage = require('./modules/deletedMessage');
+const checkForReactions = require('./checkForReactions');
+const checkForModIdea = require('./checkForModIdea');
+const noBully = require('./noBully');
+const commandHandler = require('./commandHandler');
+const deletedMessage = require('./deletedMessage');
 
 module.exports = {
     checkForReactions,
