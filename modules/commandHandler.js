@@ -7,12 +7,12 @@ const channelID = ['807377739007000658', '813790122944364574'];
 module.exports = client => {
     client.commands = new Discord.Collection();
 
-    const commandFolders = fs.readdirSync('./commands');
+    const commandFolders = fs.readdirSync('./modules/commands');
 
     for(const folder of commandFolders) {
-        const commandFiles = fs.readdirSync(`./commands/${folder}`).filter(file => file.endsWith('.js'));
+        const commandFiles = fs.readdirSync(`./modules/commands/${folder}`).filter(file => file.endsWith('.js'));
         for (const file of commandFiles) {
-            const command = require(`./commands/${folder}/${file}`);
+            const command = require(`./modules/commands/${folder}/${file}`);
             client.commands.set(command.name, command);
         }
     }
