@@ -30,7 +30,10 @@ This project was a learning experience for me in teaching myself how to code & m
 
 
 ### But how do I use it
-In every file, there is a variable at the top that is the custom ID for a role/channel & such, if you change those variables to the ones found in your own server, the bot *should* be plug & play
+In every file, there is a variable at the top that is the custom ID for a role/channel & such, if you change those variables to the ones found in your own server, the bot *should* be plug & play. 
+[index.js](../blob/main/index.js) 
+<img src="https://i.imgur.com/Y3dzzg4.png">
+Create a file in the root directory called `.env` & put inside it `discordAuthTokenBDB=AUTH_TOKEN_HERE` to login with the bot
 [checkForReactions](../blob/main/checkForReactions.js)
 <img src="https://i.imgur.com/p3G4SGz.png">
 
