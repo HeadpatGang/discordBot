@@ -32,7 +32,7 @@ This project was a learning experience for me in teaching myself how to code & m
 ### But how do I use it
 In every file, there is a variable at the top that is the custom ID for a role/channel & such, if you change those variables to the ones found in your own server, the bot *should* be plug & play
 [checkForReactions](../blob/main/checkForReactions.js)
-<img src="https://i.imgur.com/p3G4SGz.png" height="100" width="100">
+<img src="https://i.imgur.com/p3G4SGz.png">
 
 
 [contributors-shield]: https://img.shields.io/github/contributors/HeadpatGang/discordBot.svg?style=for-the-badge
