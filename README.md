@@ -34,6 +34,7 @@ In every file, there is a variable at the top that is the custom ID for a role/c
 [index.js](../blob/main/index.js) 
 <img src="https://i.imgur.com/Y3dzzg4.png">
 Create a file in the root directory called `.env` & put inside it `discordAuthTokenBDB=AUTH_TOKEN_HERE` to login with the bot
+<br />
 [checkForReactions](../blob/main/checkForReactions.js)
 <img src="https://i.imgur.com/p3G4SGz.png">
 
